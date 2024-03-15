@@ -1,38 +1,316 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Playpen Sans", cursive;
+}
+
+:root {
+  --bg-color: #052c0a;
+  --second-bg-color: #252b02;
+  --text-color: #fff;
+  --main-color: rgb(29, 105, 45);
+}
+
+html {
+  font-size: 62%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 100px 9% 20px;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.btn {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background-color: var(--second-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.header.sticky {
+  background: rgb(29, 105, 45);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  padding: 0.6rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--text-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+   background-image: url(./components/assets/pozadina.jpg); 
+}
+
+.home-container h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.home-container h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-container p {
+  font-size: 1.6rem;
+}
+
+.o-meni {
+  background-color: var(--second-bg-color);
+}
+
+.o-meni h2 {
+  margin-bottom: 5rem;
+}
+
+.o-meni-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.o-meni-container img {
+  width: 18vw;
+  border: 5px solid var(--main-color);
+  border-radius: 200px;
+}
+
+.o-meni-container p {
+  font-size: 1.6rem;
+  margin: 20px 10px 30px;
+}
+
+
+
+.servisi h2 {
+  margin-bottom: 5rem;
+}
+
+.servisi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.servisi-container .servis-box {
+  flex: 1 1 300px;
+  padding: 30px 20px 40px;
+  background-color: rgba(29, 105, 45, 0.7);
+  border-radius: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.servis-box h2 {
+  font-size: 2.6rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.servis-box p {
+  font-size: 1.2rem;
+  margin: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gif {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.umeca {
+  background-color: var(--second-bg-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.umeca h2 {
+  margin-bottom: 5rem;
+}
+
+.umeca-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.umeca-container .umece-box {
+  flex: 1 1 300px;
+  background-color: var(--main-color);
+  padding: 30px 20px 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.umeca-container h2 {
+  font-size: 2rem;
+}
+
+.umeca-container p {
+  font-size: 1.6rem;
+  margin: 10px 0 30px;
+}
+
+.umeca-container i {
+  font-size: 5rem;
+}
+
+.projekti {
+   background-image: url(./components/assets/pozadina\ 4.jpg); 
+  background-size: cover;
+}
+
+.projekti h2 {
+  margin-bottom: 2rem;
+}
+
+.projekt-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.projekt-container .projekti-box {
+  padding: 30px;
+  background-color: rgba(29, 105, 45, 0.7);
+  border-radius: 20px;
+}
+
+.projekti-box img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.projekti-box h4 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.projekti-box p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.kontakt h2 {
+  margin-bottom: 2rem;
+}
+
+.kontakt form {
+  max-width: 50%;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.kontakt form .input {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.kontakt form .input-box input,
+.kontakt form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--second-bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.kontakt form textarea {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    flex-direction: column;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+    color: var(--text-color);
+    border-bottom: 1px solid var(--main-color);
+  }
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .o-meni-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .o-meni-container img {
+    width: 40vw;
+  }
+
+  .projekt-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
