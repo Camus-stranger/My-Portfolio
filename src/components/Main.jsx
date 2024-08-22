@@ -5,6 +5,7 @@ import gif from "./assets/giphy.gif"
 import project1 from "./assets/project1.webp"
 import project2 from "./assets/project2.jpg"
 import project3 from "./assets/project3.webp"
+import video from "./assets/wallpaper.mp4"
 
 function Main(){
     return(
@@ -23,6 +24,7 @@ function Main(){
       </header>
   
       <section class="home" id="home">
+        <video src={video} type="video/mp4" class="backvideo " autoPlay loop muted playsInline></video>
         <div class="home-container">
           <h3>Helo, My Name Is</h3>
           <h1>Dimitrije Obradovic</h1>
